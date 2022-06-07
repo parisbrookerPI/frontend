@@ -6,7 +6,7 @@
     <!-- MDB -->
     <div class="container g-5">
       <div class="row pt-5 g-5">
-        <div class="col-md-3">
+        <div class="col-md-2">
           <img
             src="https://images.unsplash.com/photo-1631557776808-91908aba7ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE3fGFldTZyTC1qNmV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
             class="card-img-top"
@@ -25,189 +25,60 @@
           </div>
         </div>
 
-        <div class="col-md-6">
-          <div class="row mx-3">
-            <!-- User 1 -->
-            <div
-              id="user1"
-              class="card bg-success bg-gradient bg-opacity-50 mb-4"
-            >
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-3">Cortni Jones</div>
-                  <div class="col-md-4 d-flex justify-content-center">
-                    <b><p id="licencestatus">Licence Active</p></b>
-                  </div>
-                  <div class="col-md-2 d-flex justify-content-center">
-                    <div class="row">
-                      <!-- Checked switch -->
-                      <div id="toggle1" class="form-check form-switch">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="flexSwitchCheckChecked1"
-                          checked
-                        />
-                        <label
-                          class="form-check-label"
-                          for="flexSwitchCheckChecked1"
-                        ></label>
-                      </div>
+        <div class="col-md-7">
+          <span> <p>Planning-inc Users</p></span>
+          <table class="table align-middle mb-0 bg-white">
+            <thead class="bg-light">
+              <tr>
+                <th>User</th>
+                <th>Analyser</th>
+                <th>Support</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (let i = 0; i < licencedUsers.length ; i++) { %>
+              <tr>
+                <td>
+                    <div class="ms-">
+                      <p class="fw-bold mb-1"><%= JSON.stringify(licencedUsers[i].userName).replace(/['"]+/g, '') %> </p>
+                      <p class="text-muted mb-0"><%= JSON.stringify(licencedUsers[i].email).replace(/['"]+/g, '') %></p>
                     </div>
                   </div>
-                  <div class="col-md-3">
-                    <button type="button" class="btn btn-danger btn-sm">
-                      Remove User
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- User 2 -->
-            <div
-              id="user2"
-              class="card bg-danger bg-gradient bg-opacity-50 mb-4"
-            >
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-3">Some Other User</div>
-                  <div class="col-md-4 d-flex justify-content-center">
-                    <b><p id="licencestatus2">Licence Unassigned</p></b>
-                  </div>
-                  <div class="col-md-2 d-flex justify-content-center">
-                    <div class="row">
-                      <!-- Checked switch -->
-                      <div id="toggle2" class="form-check form-switch">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="flexSwitchCheckChecked2"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="flexSwitchCheckChecked2"
-                        ></label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <button type="button" class="btn btn-danger btn-sm">
-                      Remove User
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- User 3 -->
-            <div
-              id="user3"
-              class="card bg-danger bg-gradient bg-opacity-50 mb-4"
-            >
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-3">Some Other User</div>
-                  <div class="col-md-4 d-flex justify-content-center">
-                    <b><p id="licencestatus3">Licence Unassigned</p></b>
-                  </div>
-                  <div class="col-md-2 d-flex justify-content-center">
-                    <div class="row">
-                      <!-- Checked switch -->
-                      <div id="toggle3" class="form-check form-switch">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="flexSwitchCheckChecked3"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="flexSwitchCheckChecked3"
-                        ></label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <button type="button" class="btn btn-danger btn-sm">
-                      Remove User
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- User 4 -->
-            <div
-              id="user4"
-              class="card bg-danger bg-gradient bg-opacity-50 mb-4"
-            >
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-3">Some Other User</div>
-                  <div class="col-md-4 d-flex justify-content-center">
-                    <b><p id="licencestatus4">Licence Unassigned</p></b>
-                  </div>
-                  <div class="col-md-2 d-flex justify-content-center">
-                    <div class="row">
-                      <!-- Checked switch -->
-                      <div id="toggle4" class="form-check form-switch">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="flexSwitchCheckChecked4"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="flexSwitchCheckChecked4"
-                        ></label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <button type="button" class="btn btn-danger btn-sm">
-                      Remove User
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- User 5 -->
-            <div
-              id="user5"
-              class="card bg-danger bg-gradient bg-opacity-50 mb-4"
-            >
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-3">Some Other User</div>
-                  <div class="col-md-4 d-flex justify-content-center">
-                    <b><p id="licencestatus5">Licence Unassigned</p></b>
-                  </div>
-                  <div class="col-md-2 d-flex justify-content-center">
-                    <div class="row">
-                      <!-- Checked switch -->
-                      <div id="toggle5" class="form-check form-switch">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="flexSwitchCheckChecked5"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="flexSwitchCheckChecked5"
-                        ></label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <button type="button" class="btn btn-danger btn-sm">
-                      Remove User
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                </td>
+                <td>
+                  <% if (licencedUsers[i].bundle == "Analyser") { %>
+                    <span class="badge badge-success rounded-pill d-inline"
+                    >Active</span
+                  >
+                  <% } else { %>
+                    <span class="badge badge-danger rounded-pill d-inline"
+                    >Unassigned</span
+                  > <% } %>
+                </td>
+                <td>
+                  <% if (licencedUsers[i].bundle == "SupportSlot") { %>
+                    <span class="badge badge-success rounded-pill d-inline"
+                    >Active</span
+                  >
+                  <% } else { %>
+                    <span class="badge badge-danger rounded-pill d-inline"
+                    >Unassigned</span
+                  > <% } %>
+                </td>
+                <td>
+                  <button id=<%=`${i}`%> type="button" class="btn btn-link btn-sm btn-rounded">
+                    Edit
+                  </button>
+                </td>  
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
         </div>
 
         <!-- Add User -->
-        <div class="col-md-3 ps-5">
+        <div class="col-md-3 ps-3">
           <div class="row text-center">
             <p class="lead">Add New User</p>
           </div>
@@ -280,131 +151,5 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
     ></script>
-    <script>
-      let totalLicences = 5;
-      let assignedLicences = 1;
-      let availableLicences = 4;
-
-      let totalLicencesHTML = document.getElementById("totallicences");
-      let assignedLicencesHTML = document.getElementById("assignedlicences");
-      let remainingLicencesHTML = document.getElementById("remaininglicences");
-
-      updateLicenceCount();
-
-      const user1Switch = document.getElementById("flexSwitchCheckChecked1");
-      const licenceStatus1 = document.getElementById("licencestatus");
-      const user1 = document.getElementById("user1");
-      user1Switch.addEventListener("change", (e) => {
-        if (user1Switch.checked) {
-          licenceStatus1.innerHTML = "Licence Active";
-          user1.classList.remove("bg-danger");
-          user1.classList.add("bg-success");
-          licenceAssignCount();
-          updateLicenceCount();
-          console.log(availableLicences);
-        } else {
-          licenceStatus1.innerHTML = "Licence Unassigned";
-          user1.classList.remove("bg-success");
-          user1.classList.add("bg-danger");
-          licenceUnassignCount();
-          updateLicenceCount();
-        }
-      });
-
-      const user2Switch = document.getElementById("flexSwitchCheckChecked2");
-      const licenceStatus2 = document.getElementById("licencestatus2");
-      const user2 = document.getElementById("user2");
-      user2Switch.addEventListener("change", (e) => {
-        if (user2Switch.checked) {
-          licenceStatus2.innerHTML = "Licence Active";
-          user2.classList.remove("bg-danger");
-          user2.classList.add("bg-success");
-          licenceAssignCount();
-          updateLicenceCount();
-          console.log(availableLicences);
-        } else {
-          licenceStatus2.innerHTML = "Licence Unassigned";
-          user2.classList.remove("bg-success");
-          user2.classList.add("bg-danger");
-          licenceUnassignCount();
-          updateLicenceCount();
-        }
-      });
-
-      const user3Switch = document.getElementById("flexSwitchCheckChecked3");
-      const licenceStatus3 = document.getElementById("licencestatus3");
-      const user3 = document.getElementById("user3");
-      user3Switch.addEventListener("change", (e) => {
-        if (user3Switch.checked) {
-          licenceStatus3.innerHTML = "Licence Active";
-          user3.classList.remove("bg-danger");
-          user3.classList.add("bg-success");
-          licenceAssignCount();
-          updateLicenceCount();
-          console.log(availableLicences);
-        } else {
-          licenceStatus3.innerHTML = "Licence Unassigned";
-          user3.classList.remove("bg-success");
-          user3.classList.add("bg-danger");
-          licenceUnassignCount();
-          updateLicenceCount();
-        }
-      });
-
-      const user4Switch = document.getElementById("flexSwitchCheckChecked4");
-      const licenceStatus4 = document.getElementById("licencestatus4");
-      const user4 = document.getElementById("user4");
-      user4Switch.addEventListener("change", (e) => {
-        if (user4Switch.checked) {
-          licenceStatus4.innerHTML = "Licence Active";
-          user4.classList.remove("bg-danger");
-          user4.classList.add("bg-success");
-          licenceAssignCount();
-          updateLicenceCount();
-          console.log(availableLicences);
-        } else {
-          licenceStatus4.innerHTML = "Licence Unassigned";
-          user4.classList.remove("bg-success");
-          user4.classList.add("bg-danger");
-          licenceUnassignCount();
-          updateLicenceCount();
-        }
-      });
-
-      const user5Switch = document.getElementById("flexSwitchCheckChecked5");
-      const licenceStatus5 = document.getElementById("licencestatus5");
-      const user5 = document.getElementById("user5");
-      user5Switch.addEventListener("change", (e) => {
-        if (user5Switch.checked) {
-          licenceStatus5.innerHTML = "Licence Active";
-          user5.classList.remove("bg-danger");
-          user5.classList.add("bg-success");
-          licenceAssignCount();
-          updateLicenceCount();
-          console.log(availableLicences);
-        } else {
-          licenceStatus5.innerHTML = "Licence Unassigned";
-          user5.classList.remove("bg-success");
-          user5.classList.add("bg-danger");
-          licenceUnassignCount();
-          updateLicenceCount();
-        }
-      });
-
-      function updateLicenceCount() {
-        totalLicencesHTML.innerHTML = `${totalLicences}`;
-        assignedLicencesHTML.innerHTML = `${assignedLicences}`;
-        remainingLicencesHTML.innerHTML = `${availableLicences}`;
-      }
-
-      function licenceAssignCount() {
-        assignedLicences++;
-        availableLicences--;
-      }
-      function licenceUnassignCount() {
-        assignedLicences--;
-        availableLicences++;
-      }
-    </script>
   </body>
 </html>
